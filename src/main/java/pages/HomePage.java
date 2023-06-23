@@ -63,10 +63,19 @@ public class HomePage {
         clickLink("Frames");
         return new FramesPage(driver);
     }
-public DynamicLoadingPage clickDynamicLoading(){
+    public DynamicLoadingPage clickDynamicLoading(){
         clickLink("Dynamic Loading");
         return new DynamicLoadingPage(driver);
 }
+    public LargeDeepDomPage clickLargeDeepDom(){
+        clickLink("Large & Deep DOM");
+        return new LargeDeepDomPage(driver);
+    }
+    public InfiniteScrollPage clickInfiniteScroll(){
+        clickLink("Infinite Scroll");
+        return new InfiniteScrollPage(driver);
+    }
+
 
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
